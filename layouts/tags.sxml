@@ -1,0 +1,2 @@
+()
+`(,(render-tagpage (collect-tags (blog-posts))))

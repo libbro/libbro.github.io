@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://3e8.org/chickadee/atom" version="0.1.1">atom egg for Chicken</generator>
+  <id>tag:example.org,2003:3</id>
+  <link href="https://libbro.github.io/index.html" rel="alternate" type="text/html" hreflang="en" />
+  <link href="http://example.org/feed.atom" rel="self" type="application/atom+xml" />
+  <rights type="text">Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 4.0 International License. Copyright 2015 libbro.</rights>
+  <subtitle type="text">The Place You Won't Remember</subtitle>
+  <title type="text">A Blog About Nothing and Something</title>
+  <updated>2015-08-20T17:23:59Z</updated>
+  <entry>
+    <author>
+      <name>libbro</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The first blog post is always the most confusing one to make. There is no clear choice as to what topic to reflect on.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://github.com/libbro/libbro.github.io"&gt;software&lt;/a&gt; for this blog was made using &lt;a href="http://wiki.call-cc.org/eggref/4/hyde"&gt;Hyde&lt;/a&gt;.&lt;/p&gt;</content>
+    <id>tag:example.org,2003:3</id>
+    <published>Thu Aug 20 13:23:59 2015</published>
+    <title type="text">Welcome to My Blog!</title>
+    <updated>2015-08-20T17:23:59Z</updated>
+    <link href="https://libbro.github.io/blog-posts/newblog.html" rel="alternate" type="application/xhtml+xml" />
+  </entry>
+</feed>

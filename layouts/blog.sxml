@@ -1,0 +1,6 @@
+()
+`((h1 ,($ 'title))
+  "Written by " ,($ 'author) " on " ,(seconds->string ($ 'date))
+  (p ,(display-tags ($ 'tags)))
+  (hr)
+  (inject ,contents))

@@ -1,0 +1,16 @@
+()
+`((xhtml-1.0-strict)
+  (html
+   (head
+    (title ,($ 'title))
+    (link (@ (rel stylesheet) (href ,(safe-link "skeleton.css"))))
+    (link (@ (rel icon) (href ,(safe-link "favicon.ico")))))
+   (body
+    ,(navbar)
+    (h1 ,($ 'displaytitle))
+    (div (@ (class "container"))
+         (inject ,contents))
+    (hr)
+    (div (@ (id "notice")) 
+         (p (a (@ (href "https://creativecommons.org/licenses/by/4.0/")) (img (@ (src "https://licensebuttons.net/l/by/3.0/88x31.png")))))
+          (p (blockquote (small "Except where otherwise noted, content on this site is licensed under a " (a (@ (href "https://creativecommons.org/licenses/by/4.0/")) "Creative Commons Attribution 4.0 International License.") " Copyright 2015 libbro.")))))))

@@ -1,0 +1,26 @@
+((title . "A Blog About Nothing and Something")
+ (subtitle . "The Place You Won't Remember"))
+
+(make-atom-doc
+ (make-feed
+  title: (make-title ($ 'title))
+  subtitle: (make-subtitle ($ 'subtitle))
+  updated: (rfc3339->string (time->rfc3339 (seconds->utc-time ($ 'updated (cdr (car (blog-posts)))))))
+  id: "tag:example.org,2003:3"
+  links: (list (make-link type: 'html
+                          uri-language: "en"
+                          uri: (safe-link "index.html"))
+               (make-link relation: "self"
+                          type: "application/atom+xml"
+                          uri: "http://example.org/feed.atom"))
+  rights: (make-rights "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 4.0 International License. Copyright 2015 libbro.")
+  entries: (map (lambda (blog)
+                  (make-entry 
+                   title: (make-title ($ 'title (cdr blog)))
+                   published: (seconds->string ($ 'date (cdr blog)))
+                   updated: (rfc3339->string (time->rfc3339 (seconds->utc-time ($ 'updated (cdr blog)))))
+                   authors: `(,(make-author name: "libbro"))
+                   id: "tag:example.org,2003:3"
+                   links: (list (make-link uri: (safe-link (fix-link (car blog))) type: 'xhtml))
+                   content: (make-content (read-page (car blog)) type: 'html)))
+                (safe-take 20 (blog-posts))))) 
